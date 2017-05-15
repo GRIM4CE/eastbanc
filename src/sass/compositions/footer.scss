@@ -14,7 +14,7 @@
     font-size: 2rem;
 
     &:hover {
-      color: $primary-color;
+      color: $primary;
     }
   }
 }
@@ -22,7 +22,7 @@
 .footer-navigation {
   display: flex;
   width: 100%;
-  color: $primary-color;
+  color: $primary;
 
   ul {
     display: inline-block;
@@ -39,7 +39,7 @@
     font-size: 400;
 
     &:hover {
-      color: $primary-color;
+      color: $primary;
       text-decoration: underline;
     }
   }

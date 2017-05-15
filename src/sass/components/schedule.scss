@@ -5,11 +5,11 @@
   width: 100%;
   margin-bottom: $gutter / 2;
   padding: $gutter * 1.5 $gutter * 2;
-  background-color: rgba($secondary-color, .8);
+  background-color: rgba($secondary, .8);
   color: $white;
 
   &:hover {
-    background-color: $secondary-color;
+    background-color: $secondary;
   }
 
   &:last-child {

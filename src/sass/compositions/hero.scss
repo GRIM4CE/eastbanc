@@ -1,56 +1,58 @@
-.hero-container {
-  height: calc(100vh - 120px);
-  padding: 2rem $gutter;
-}
-
-.hero-blackout {
-  padding: 3rem 0;
-}
-
 .hero {
-  background-color: $shade700;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center center;
   background-size: cover;
   color: $white;
+  text-align: center;
 
-  .hero-logo {
-    margin: $gutter;
-    text-align: center;
-
+  .logo {
     img {
-      max-width: 80%;
+      width: 100%;
+      max-width: 500px;
+      margin: 5rem auto 0;
+      padding: 0 $gutter * 2;
     }
-  }
-
-  .hero-description {
-    padding: $gutter 0;
-    line-height: 1.6;
-    text-align: center;
   }
 }
 
 .hero-opacity {
-  padding: 5rem $gutter;
-  background-color: rgba($shade700, .6);
+  padding: 150px;
+  background-color: rgba($black, .6);
+}
+
+.hero-content {
+  .heading-text {
+    margin: 1rem 0;
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+.hero-dark {
+  color: $white;
 }
 
 @media all and (min-width: 37.5rem) {
-  .hero-container {
-    height: calc(100vh - 50px);
-    padding: 2rem $gutter;
-  }
+  // min-width: 600px
 
   .hero {
-    .hero-logo {
+    background-attachment: fixed;
+    background-position: center bottom;
+
+    .logo {
       img {
-        width: 100%;
-        max-width: 400px;
+        margin-top: 3rem;
       }
     }
   }
+}
 
-  .hero-blackout {
-    padding: 6rem 0;
+@media all and (min-width: 50rem) {
+  .date-container {
+    padding-top: 3rem;
+
+    .date {
+      margin: .5rem 0;
+    }
   }
 }
