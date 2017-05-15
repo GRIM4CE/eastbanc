@@ -1,16 +1,24 @@
-* {
+*,
+body,
+html {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  color: $body-color;
 }
 
-body,
-html,
-p {
-  font-family: $base-font;
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .page-center {
@@ -19,28 +27,11 @@ p {
   float: none !important;
 }
 
-.hidden {
-  display: none !important;
-}
-
 //Hubspot Specific
 .widget-type-raw_jinja {
   min-height: 0 !important;
 } // Removes space from Hubl Template?
 
-.header-container-wrapper {
-  height: 0;
+.row-fluid [class*="span"] {
+  min-height: inherit !important;
 }
-
-.body-container-wrapper {
-  margin-top: 120px;
-}
-
-@media all and (min-width: 37.5rem) {
-  .body-container-wrapper {
-    margin-top: 50px;
-  }
-}
-
-@import 'typography';
-@import 'buttons';

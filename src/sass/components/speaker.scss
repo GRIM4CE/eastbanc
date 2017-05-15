@@ -1,0 +1,143 @@
+.speaker-container {
+  position: relative;
+}
+
+.speaker-image {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+  }
+}
+
+.speaker-name {
+  margin: 1rem 0 0;
+}
+
+.speaker-title {
+  margin: .25rem 0 2rem;
+}
+
+.speaker-name,
+.speaker-title {
+  color: $white;
+  text-align: center;
+}
+
+.speaker-description {
+  position: absolute;
+  top: 140px;
+  right: 0;
+  left: 0;
+  max-width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 20px;
+  border-radius: 4px;
+  background: $white;
+  color: $shade700;
+  line-height: 1.4;
+  box-shadow: 0 3px 7px rgba($black, .2);
+  z-index: 3;
+
+  p {
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  &::before {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    left: 0;
+    margin: 0 auto !important;
+    color: $white;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 25px;
+    text-align: center;
+    content: '\f0d8';
+  }
+
+  &[data-state=hidden] {
+    transform: scale(.1);
+    transform-origin: top;
+    transition: all .6s;
+    opacity: 0;
+  }
+
+  &[data-state=visible] {
+    transition: all .2s;
+    opacity: 1;
+  }
+}
+
+@media all and (min-width: 37.5rem) {
+  .keynote-speaker {
+    .speaker-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+
+    .speaker-image {
+      width: 175px;
+      height: 175px;
+      margin: 0;
+    }
+
+    .speaker-content {
+      width: 60%;
+      max-width: 600px;
+      margin-left: 2rem;
+    }
+
+    .speaker-name,
+    .speaker-title {
+      width: 100%;
+      text-align: left;
+    }
+
+    .speaker-title {
+      margin: .25rem 0 .5rem;
+    }
+
+    .speaker-description {
+      position: relative;
+      top: initial;
+      right: initial;
+      left: initial;
+      max-width: none;
+      margin: 0 auto !important;
+      padding: 0;
+      border-radius: none;
+      background: transparent;
+      color: $white;
+      line-height: 1.4;
+      box-shadow: none;
+      z-index: initial;
+
+      p {
+        margin: 0;
+        line-height: 1.4;
+      }
+
+      &::before {
+        content: '';
+      }
+
+      &[data-state=hidden] {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      &[data-state=visible] {
+        opacity: 1;
+      }
+    }
+  }
+}

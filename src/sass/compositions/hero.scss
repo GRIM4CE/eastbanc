@@ -4,15 +4,6 @@
   background-size: cover;
   color: $white;
   text-align: center;
-
-  .logo {
-    img {
-      width: 100%;
-      max-width: 500px;
-      margin: 5rem auto 0;
-      padding: 0 $gutter * 2;
-    }
-  }
 }
 
 .hero-opacity {
@@ -20,39 +11,9 @@
   background-color: rgba($black, .6);
 }
 
-.hero-content {
-  .heading-text {
-    margin: 1rem 0;
-    font-size: 36px;
-    text-align: center;
-  }
-}
-
-.hero-dark {
-  color: $white;
-}
-
 @media all and (min-width: 37.5rem) {
-  // min-width: 600px
-
   .hero {
     background-attachment: fixed;
     background-position: center bottom;
-
-    .logo {
-      img {
-        margin-top: 3rem;
-      }
-    }
-  }
-}
-
-@media all and (min-width: 50rem) {
-  .date-container {
-    padding-top: 3rem;
-
-    .date {
-      margin: .5rem 0;
-    }
   }
 }

@@ -2,11 +2,12 @@
 @import 'identity/geometrics';
 @import 'identity/typography';
 
-@import 'elements/extends';
 @import 'elements/base';
+@import 'elements/buttons';
 
 @import 'components/storyboard';
 @import 'components/schedule';
+@import 'components/speaker';
 @import 'components/sponsors';
 @import 'components/modal';
 
