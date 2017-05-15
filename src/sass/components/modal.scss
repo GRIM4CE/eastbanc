@@ -1,0 +1,163 @@
+body {
+  &[data-state="inactive"] {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.modal-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  transition: .4s;
+  transition-property: opacity;
+  background-color: $white;
+  overflow: scroll;
+  z-index: 10;
+
+  .close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: $shade700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  &[data-state="inactive"] {
+    transform: translateX(-5000px);
+    opacity: 0;
+  }
+
+  &[data-state="active"] {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hbspt-form {
+  position: relative;
+  width: 100%;
+
+  .submitted-message {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    max-width: 100%;
+    transform: translate(-50%, -40%);
+    color: $shade700;
+    font-family: $head-font-light;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+.hs-form {
+  .hs-form-field {
+    padding-bottom: 1.5rem;
+    color: $shade700;
+    font-family: $base-font;
+  }
+
+  fieldset {
+    max-width: none !important;
+  }
+
+  label {
+    display: block;
+    margin-bottom: $gutter / 2;
+  }
+
+  .hs-input {
+    width: 100% !important;
+    height: 40px;
+    margin-top: .25rem;
+    padding: 0 $gutter;
+    border: 1px solid $shade300;
+    border-radius: 5px;
+    font-family: $base-font;
+    font-size: 16px;
+  }
+
+  textarea {
+    height: 75px !important;
+  }
+
+  .hs-error-msgs {
+    padding-top: .75rem;
+    color: $error;
+    font-size: 14px;
+    font-weight: 200;
+  }
+}
+
+.inputs-list {
+  margin: 0;
+  padding: 0;
+
+  .hs-input {
+    width: initial;
+    height: initial;
+    margin-top: initial;
+    margin-right: 1rem;
+  }
+}
+
+.hs-form-booleancheckbox,
+.hs-form-radio {
+  list-style: none;
+}
+
+.hs-button {
+  width: 100%;
+  padding: .5em .8em;
+  border: 0;
+  border-radius: 5px !important;
+  background: $primary-color !important;
+  color: $white !important;
+  font-size: 22px !important;
+  text-shadow: 1px 1px 0 rgba($shade700, .05);
+  box-shadow: 0 2px 4px rgba($shade700, .1);
+  cursor: pointer;
+  appearance: none !important;
+
+  &:hover {
+    background: $primary-color;
+  }
+}
+
+@media all and (min-width: 37.5rem) {
+  .modal-container {
+    padding: 0;
+
+    .close-button {
+      top: 3rem;
+      right: 3rem;
+    }
+
+    .hbspt-form {
+      margin: 0 auto;
+    }
+  }
+
+  .hs-form {
+    max-width: 600px;
+    margin: 5rem auto;
+  }
+
+  .hbspt-form {
+    .submitted-message {
+      font-size: 28px;
+    }
+  }
+}

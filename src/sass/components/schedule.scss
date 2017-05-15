@@ -1,0 +1,48 @@
+.schedule-event {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-bottom: $gutter / 2;
+  padding: $gutter * 1.5 $gutter * 2;
+  background-color: rgba($secondary-color, .8);
+  color: $white;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .clock-glyph {
+    display: none;
+    margin-top: -.1rem;
+    margin-right: $gutter;
+    line-height: 0;
+  }
+
+  .time {
+    flex: 1 100%;
+    margin-bottom: $gutter / 2;
+  }
+
+  .hyphen {
+    display: none;
+  }
+}
+
+@media all and (min-width: 37.5rem) {
+  .schedule-event {
+    .clock-glyph,
+    .hyphen {
+      display: block;
+    }
+
+    .time {
+      flex: inherit;
+      margin-bottom: 0;
+    }
+  }
+}

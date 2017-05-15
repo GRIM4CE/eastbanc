@@ -1,0 +1,31 @@
+.storyboard-container {
+  margin: $gutter 0;
+}
+
+.storyboard-image {
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.storyboard-secondary-image {
+  display: none !important;
+}
+
+.storyboard-description {
+  margin: $gutter 0;
+}
+
+@media all and (min-width: 50rem) {
+  .storyboard-secondary-image {
+    display: block !important;
+  }
+
+  .storyboard-image {
+    img {
+      display: inline;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+button {
+  @extend %button;
+}
+
+.button-large {
+  padding: .75rem 3rem;
+  font-size: 18px;
+}
+
+.nvite-rsvp-widget-button {
+  margin: $gutter auto;
+  background: $primary-color !important;
+
+  &:hover {
+    background: $primary-color !important;
+  }
+}
+
+@media all and (min-width: 37.5rem) {
+  .button-large {
+    padding: 1rem 4rem;
+    font-size: 24px;
+  }
+}

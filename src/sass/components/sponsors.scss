@@ -1,0 +1,21 @@
+.sponsors-container {
+  display: flex;
+  justify-content: center;
+  margin: $gutter;
+
+  .sponsor-logo {
+    display: block;
+    width: 70%;
+    max-width: 400px;
+    margin: $gutter auto;
+  }
+}
+
+@media all and (min-width: 37.5rem) {
+  .sponsors-container {
+    .sponsor-logo {
+      display: inline;
+      width: 100%;
+    }
+  }
+}

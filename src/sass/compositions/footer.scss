@@ -1,0 +1,52 @@
+.footer-section {
+  @extend %gutter;
+  background-color: $footer-color;
+}
+
+.social-media-container {
+  @extend %gutter;
+  display: flex;
+  justify-content: center;
+
+  i {
+    margin: 0 $gutter;
+    color: $white;
+    font-size: 2rem;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.footer-navigation {
+  display: flex;
+  width: 100%;
+  color: $primary-color;
+
+  ul {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0 $gutter;
+  }
+
+  a {
+    color: $white;
+    font-size: 400;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.copyright {
+  @extend %gutter;
+  color: $white;
+  text-align: center;
+}

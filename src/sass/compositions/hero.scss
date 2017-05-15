@@ -1,0 +1,56 @@
+.hero-container {
+  height: calc(100vh - 120px);
+  padding: 2rem $gutter;
+}
+
+.hero-blackout {
+  padding: 3rem 0;
+}
+
+.hero {
+  background-color: $shade700;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  color: $white;
+
+  .hero-logo {
+    margin: $gutter;
+    text-align: center;
+
+    img {
+      max-width: 80%;
+    }
+  }
+
+  .hero-description {
+    padding: $gutter 0;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+.hero-opacity {
+  padding: 5rem $gutter;
+  background-color: rgba($shade700, .6);
+}
+
+@media all and (min-width: 37.5rem) {
+  .hero-container {
+    height: calc(100vh - 50px);
+    padding: 2rem $gutter;
+  }
+
+  .hero {
+    .hero-logo {
+      img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .hero-blackout {
+    padding: 6rem 0;
+  }
+}
