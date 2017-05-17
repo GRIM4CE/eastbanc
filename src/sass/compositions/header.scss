@@ -1,3 +1,7 @@
+.header-clearfix {
+  height: 120px;
+}
+
 header {
   display: flex;
   position: fixed;
@@ -49,10 +53,14 @@ header {
 }
 
 @media all and (min-width: 37.5rem) {
+  .header-clearfix {
+    height: 85px;
+  }
+
   header {
     justify-content: flex-start;
     width: 100%;
-    height: auto;
+    height: 85px;
 
     .cfp-tagline {
       flex-basis: auto;
@@ -61,48 +69,11 @@ header {
     }
 
     .logo {
-      flex-basis: auto;
-      align-self: center;
+      margin: 10px 0 10px 2rem;
     }
 
     .registration-button {
       margin: 0 2rem 0 auto;
-    }
-  }
-}
-
-@media all and (min-width: 50rem) {
-  header {
-    justify-content: flex-start;
-    width: 100%;
-    height: auto;
-
-    .event-notice {
-      display: block;
-    }
-
-    button {
-      margin-right: 2rem;
-      margin-left: auto;
-    }
-
-    .cfp-tagline {
-      flex-basis: auto;
-      align-self: center;
-      margin: 0 0 0 2rem;
-    }
-
-    .logo {
-      flex-basis: auto;
-      align-self: center;
-      margin: 10px 0 10px 2rem;
-    }
-
-    h4 {
-      margin: 0 1rem 0 auto;
-      padding: 0;
-      border-radius: 0;
-      background-color: transparent;
     }
   }
 }
