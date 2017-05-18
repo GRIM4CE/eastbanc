@@ -13,7 +13,7 @@ function appInit() {
     const personnelContainers = document.querySelectorAll('.speaker-container');
     for (let i = 0; i < personnelContainers.length; i++) {
       if (personnelContainers[i].querySelector('.speaker-description') !== null) {
-        new Speaker(personnelContainers[i]);
+        new Personnel(personnelContainers[i]);
       }
     }
   }
