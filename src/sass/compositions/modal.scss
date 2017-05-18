@@ -14,7 +14,7 @@
   transition-property: opacity;
   background-color: $white;
   overflow: scroll;
-  z-index: 10;
+  z-index: 11;
 
   &[data-state="inactive"] {
     transform: translateX(-5000px);
@@ -24,19 +24,5 @@
   &[data-state="active"] {
     transform: translateX(0);
     opacity: 1;
-  }
-
-  .close-button {
-    @extend %gutter;
-    width: 100%;
-    color: $shade700;
-    font-size: 1.5rem;
-    text-align: right;
-  }
-}
-
-@media all and (min-width: 37.5rem) {
-  .close-button {
-    height: 0;
   }
 }
