@@ -12,17 +12,16 @@
 <body>
 
   <header>
-  <div class="cfp-tagline">May 23-25, ASPEN, CO
-  </div>
-  <a id="registration-open-button" class="cfp-button">Request Invitation
-  <i class="fa fa-plus-circle"></i>
-  </a>
+    <img class="logo" src="https://cdn2.hubspot.net/hubfs/482737/Client%20and%20Partner%20Logos/ebt-logo-500.png" alt="Eastbanc" />
+    <button class="registration-button modal-open-button" data-form="registration">RSVP</button>
   </header>
+
+  <div class="header-clearfix"></div>
 
   <div class="hero-container">
     <div class="hero-content">
       <div class="hero-event-logo">
-        <img src="https://www.modev.com/hs-fs/hubfs/EXO-Logos/exo-software-security-w.png?t=1479859662661&amp;width=1280&amp;name=exo-software-security-w.png"/>
+        <img src="https://www.modev.com/hs-fs/hubfs/EXO-Logos/exo-software-security-w.png?t=1479859662661&amp;width=1280&amp;name=exo-software-security-w.png" />
       </div>
 
       <div class="hero-event-date">
@@ -39,11 +38,39 @@
     </div>
   </div>
 
-  <div class="lead-in">
+  <div class="modal-container" data-state="inactive" data-form="registration">
+    <i class="material-icons close-button modal-close-button">close</i>
 
+    <div class="modal-form" data-state="inactive">
+      <!--[if lte IE 8]>
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+      <![endif]-->
+      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          css: '',
+          portalId: '482737',
+          formId: 'bf269677-f89c-4466-b351-a88e6b539a38',
+          onFormSubmit: function($form) {
+          document.querySelector('.modal-form').setAttribute('data-state', 'inactive');
+          setTimeout(function () {
+              document.querySelector('.modal-share').setAttribute('data-state', 'active');
+            }, 500);
+          }
+        });
+      </script>
+    </div>
+
+    <div class="modal-share" data-state="active">
+      <h2>Thank you for registering. You'll receive a confirmation email shortly.</h2>
+      <a href=""><i class="fa fa-facebook"></i></a>
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-google-plus"></i></a>
+      <a href=""><i class="fa fa-linkedin"></i></a>
+    </div>
   </div>
 
-  <script src="../js/exo.js"></script>
+  <script src="../js/bundle.js"></script>
 </body>
 
 </html>

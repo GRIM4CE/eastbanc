@@ -31,6 +31,7 @@ body {
     color: $shade700;
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 12;
   }
 
   &[data-state="inactive"] {
@@ -43,9 +44,39 @@ body {
     opacity: 1;
   }
 
-  .hbspt-form {
-    position: relative;
+  .modal-form {
     width: 100%;
+
+    &[data-state="inactive"] {
+      display: none;
+    }
+  }
+
+  .modal-share {
+    max-width: 600px;
+    margin: 30vh auto;
+    padding: 2rem;
+    transition: opacity 1s;
+    text-align: center;
+
+    &[data-state="inactive"] {
+      opacity: 0;
+    }
+
+    &[data-state="active"] {
+      opacity: 1;
+    }
+
+    i {
+      margin: .5rem;
+      transition: transform .2s;
+      color: $primary;
+      font-size: 24px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
   }
 
   .submitted-message {
@@ -81,6 +112,13 @@ body {
 
       .submitted-message {
         font-size: 28px;
+      }
+    }
+
+    .modal-share {
+      i {
+        margin: .75rem;
+        font-size: 30px;
       }
     }
   }
